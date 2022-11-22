@@ -2,20 +2,20 @@
 
 > 基于ESP32-C3的开发板，[ESP32-C3-DEVKITM-1](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html)的重制版，保持十分考究的布局，提供AD原始工程、Gerber、BOM
 
+## PCB
+
+| 使用ESP32-C3 MINI-1模组                                | 使用ESP32-C3 MINI-1U模组                                 |
+| ------------------------------------------------------ | -------------------------------------------------------- |
+| ![ESP32-C3_DEV-M-1(1)](Images/ESP32-C3_DEV-M-1(1).png) | ![ESP32-C3_DEV-M-1u(1)](Images/ESP32-C3_DEV-M-1u(1).png) |
+| ![ESP32-C3_DEV-M-1(2)](Images/ESP32-C3_DEV-M-1(2).png) | ![ESP32-C3_DEV-M-1u(2)](Images/ESP32-C3_DEV-M-1u(2).png) |
+| ![ESP32-C3_DEV-M-1(3)](Images/ESP32-C3_DEV-M-1(3).png) | ![ESP32-C3_DEV-M-1u(3)](Images/ESP32-C3_DEV-M-1u(3).png) |
+
 ## 工艺
 
 - 板厚：1.0~1.6mm 均可
 - 层数：2层
 - 过孔：0.3/0.5mm
 - 最小线宽线隙：5mil
-
-## PCB布局
-
-| 使用ESP32-C3 MINI-1模组                                | 使用ESP32-C3 MINI-1U模组                                 |
-| ------------------------------------------------------ | -------------------------------------------------------- |
-| ![ESP32-C3 DEV-M-1(1)](Images/ESP32-C3 DEV-M-1(1).png) | ![ESP32-C3 DEV-M-1u(1)](Images/ESP32-C3 DEV-M-1u(1).png) |
-| ![ESP32-C3 DEV-M-1(2)](Images/ESP32-C3 DEV-M-1(2).png) | ![ESP32-C3 DEV-M-1u(2)](Images/ESP32-C3 DEV-M-1u(2).png) |
-| ![ESP32-C3 DEV-M-1(3)](Images/ESP32-C3 DEV-M-1(3).png) | ![ESP32-C3 DEV-M-1u(3)](Images/ESP32-C3 DEV-M-1u(3).png) |
 
 ## Type-C正反插
 
@@ -28,9 +28,25 @@
 
 ## 照片&亮机测试
 
+模组焊接很难，对锡膏均匀度要求很高，不开钢网很难弄
+
 Example文件夹内有最基本的wifi、GPIO、串口、RGB灯测试
 
 ![hardware](Example/Arduino/WiFiScan/Images/hardware.JPG)
+
+## 按键boot和reset组合，尝试进入下载模式，但不打印 “waiting for download”，仍然一直打印invalid header: 0xffffffff？
+
+使用全新的模组，首次焊接好通电，不论是esp32-c3自身串口，还是cp2102的串口，会一直打印invalid header: 0xffffffff，然后自己复位，如此反复，如果GPIO8是高电平，按键boot和reset组合进入下载模式却不打印 “waiting for download”，那么是正常现象，因为出厂是不带BOOT的，可以使用flash_download_tool连接开发板进入下载模式，只需要连接一次，烧录bootloader.bin在0x0地址，然后就可以按下boot键不放，按下松开一次reset键，进入下载模式就会打印 “waiting for download”，或者随便烧录一个arduino esp32-c3例程进去，也可以解决
+
+![成功烧录wfiscan示例](Images/成功烧录wfiscan示例.png)
+
+```
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x4 (DOWNLOAD(USB/UART0/1))
+Saved PC:0x400462e2
+waiting for download   <----按键boot和reset组合，尝试进入下载模式OK
+```
 
 ## 烧录程序
 
