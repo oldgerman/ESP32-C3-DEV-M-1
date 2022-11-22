@@ -4,8 +4,6 @@
 
 ![初号机(1)](Images/初号机(1).JPG)
 
-![初号机(2)](Images/初号机(2).JPG)
-
 ## PCB
 
 | 使用ESP32-C3 MINI-1模组                                | 使用ESP32-C3 MINI-1U模组                                 |
