@@ -1,10 +1,10 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: ESP32-C3 DEV-M-1.PcbDoc   2022/11/14  0:50:06
+NCDrill File Report For: ESP32-C3 DEV-M-1.PcbDoc   2022/11/22  18:39:48
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
-ASCII Plated RoundHoles File : ESP32-C3 DEV-M-1-RoundHoles-Plated.TXT
-ASCII Plated SlotHoles File : ESP32-C3 DEV-M-1-SlotHoles-Plated.TXT
+ASCII RoundHoles File : ESP32-C3 DEV-M-1-RoundHoles.TXT
+ASCII SlotHoles File : ESP32-C3 DEV-M-1-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -15,4 +15,4 @@ T4      40mil (1.016mm)                                           Round         
 ----------------------------------------------------------------------------------------------------------------------------------
 Totals                                                                              173
 
-Total Processing Time (hh:mm:ss) : 00:00:01
+Total Processing Time (hh:mm:ss) : 00:00:00
