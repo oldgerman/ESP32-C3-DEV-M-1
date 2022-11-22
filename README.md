@@ -4,6 +4,8 @@
 
 ![初号机(1)](Images/初号机(1).JPG)
 
+[Github仓库链接](https://github.com/oldgerman/ESP32-C3-DEV-M-1)
+
 ## PCB
 
 | 使用ESP32-C3 MINI-1模组                                | 使用ESP32-C3 MINI-1U模组                                 |
