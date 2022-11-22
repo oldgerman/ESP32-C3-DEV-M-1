@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : D:\ODG-PROJECT\ESP32-C3 DEV-M-1\AD_Project\ESP32-C3 DEV-M-1\ESP32-C3 DEV-M-1.PcbDoc
-Date     : 2022/11/13
-Time     : 21:14:19
+Date     : 2022/11/22
+Time     : 18:53:29
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
@@ -45,4 +45,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02

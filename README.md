@@ -2,6 +2,10 @@
 
 > 基于ESP32-C3的开发板，[ESP32-C3-DEVKITM-1](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html)的重制版，保持十分考究的布局，提供AD原始工程、Gerber、BOM
 
+![初号机(1)](Images/初号机(1).JPG)
+
+![初号机(2)](Images/初号机(2).JPG)
+
 ## PCB
 
 | 使用ESP32-C3 MINI-1模组                                | 使用ESP32-C3 MINI-1U模组                                 |
@@ -22,9 +26,9 @@
 - 正插：使用CP2102的串口
 - 反插：使用ESP32-C3FN4或ESP32-C3FH4片内集成的USB串口，可以不焊接CP2102相关的电路使用ESP32-C3自带的USB串口桥烧录或者调试
 
-## 照片&亮机测试
+## 亮机测试
 
-模组焊接很难，对锡膏均匀度要求很高，不开钢网很难弄
+模组焊接很难，对锡膏均匀度要求很高，不开钢网很难搞
 
 Example文件夹内有最基本的wifi、GPIO、串口、RGB灯测试
 
